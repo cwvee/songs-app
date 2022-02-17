@@ -40,3 +40,14 @@ module.exports.updateSong = (reqParams, reqBody) => {
     }
   );
 };
+
+//delete song
+module.exports.deleteSong = (reqParams) => {
+  return Song.findByIdAndDelete(reqParams.id).then((song, error) => {
+    if (error) {
+      return error;
+    } else {
+      return "Song was deleted";
+    }
+  });
+};

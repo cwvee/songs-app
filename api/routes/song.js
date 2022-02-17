@@ -20,4 +20,7 @@ router.put("/:id", (req, res) => {
 });
 
 //delete song
+router.delete("/:id", (req, res) => {
+  songController.deleteSong(req.params).then((result) => res.send(result));
+});
 module.exports = router;
