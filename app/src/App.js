@@ -160,12 +160,12 @@ function App() {
 
         <Modal className="modal" show={showAdd} onHide={closeAdd}>
           <Form onSubmit={(e) => addSong(e)}>
-            <Modal.Header closeButton>
+            <Modal.Header>
               <Modal.Title>Add Song</Modal.Title>
             </Modal.Header>
             <Modal.Body>
-              <Form.Group controlId="songTitle">
-                <Form.Label>Title</Form.Label>
+              <Form.Group className="input-grp" controlId="songTitle">
+                <Form.Label>Title: </Form.Label>
                 <Form.Control
                   type="text"
                   value={title}
@@ -173,8 +173,8 @@ function App() {
                   required
                 />
               </Form.Group>
-              <Form.Group controlId="songArtist">
-                <Form.Label>Artist</Form.Label>
+              <Form.Group className="input-grp" controlId="songArtist">
+                <Form.Label>Artist: </Form.Label>
                 <Form.Control
                   type="text"
                   value={artist}
@@ -182,9 +182,10 @@ function App() {
                   required
                 />
               </Form.Group>
-              <Form.Group controlId="songLyrics">
-                <Form.Label>Lyrics</Form.Label>
+              <Form.Group className="input-grp" controlId="songLyrics">
+                <Form.Label>Lyrics: </Form.Label>
                 <Form.Control
+                  className="text-box"
                   type="text"
                   value={lyrics}
                   onChange={(e) => setLyrics(e.target.value)}
@@ -205,12 +206,12 @@ function App() {
 
         <Modal className="modal" show={showEdit} onHide={closeEdit}>
           <Form onSubmit={(e) => updateSong(e, songID)}>
-            <Modal.Header closeButton>
+            <Modal.Header>
               <Modal.Title>Update Song</Modal.Title>
             </Modal.Header>
             <Modal.Body>
-              <Form.Group controlId="title">
-                <Form.Label>Title</Form.Label>
+              <Form.Group className="input-grp" controlId="title">
+                <Form.Label>Title: </Form.Label>
                 <Form.Control
                   type="text"
                   value={title}
@@ -218,8 +219,8 @@ function App() {
                   required
                 />
               </Form.Group>
-              <Form.Group controlId="artist">
-                <Form.Label>Artist</Form.Label>
+              <Form.Group className="input-grp" controlId="artist">
+                <Form.Label>Artist: </Form.Label>
                 <Form.Control
                   type="text"
                   value={artist}
@@ -227,9 +228,10 @@ function App() {
                   required
                 />
               </Form.Group>
-              <Form.Group controlId="lyrics">
-                <Form.Label>Lyrics</Form.Label>
+              <Form.Group className="input-grp" controlId="lyrics">
+                <Form.Label>Lyrics: </Form.Label>
                 <Form.Control
+                  className="text-box"
                   type="text"
                   value={lyrics}
                   onChange={(e) => setLyrics(e.target.value)}

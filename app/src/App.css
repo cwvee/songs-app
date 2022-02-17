@@ -71,3 +71,16 @@ td {
   margin: auto auto;
   text-align: center;
 }
+
+.text-box {
+  width: 70%;
+}
+
+.input-grp {
+  padding: 10px;
+  margin-top: 10px;
+}
+
+html {
+  overflow: scroll;
+}
