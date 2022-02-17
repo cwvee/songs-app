@@ -36,3 +36,38 @@
     transform: rotate(360deg);
   }
 }
+
+table {
+  width: 80%;
+  margin: 10px auto;
+}
+
+th {
+  background-color: #3ebb48;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+td {
+  padding: 12px;
+}
+
+.btn {
+  background-color: #282c34;
+  color: white;
+  padding: 10px;
+  border-radius: 5px;
+  border: none;
+  margin: 4px;
+
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+.modal {
+  border: 6px solid black;
+  border-radius: 10px;
+  width: 50%;
+  margin: auto auto;
+  text-align: center;
+}

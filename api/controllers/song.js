@@ -9,9 +9,9 @@ module.exports.addSong = (reqBody) => {
   });
   return newSong.save().then((user, error) => {
     if (error) {
-      return error;
+      return false;
     } else {
-      return "New Song Added";
+      return true;
     }
   });
 };
@@ -19,6 +19,12 @@ module.exports.addSong = (reqBody) => {
 //Get all songs
 module.exports.getAll = () => {
   return Song.find({}).then((result) => {
+    return result;
+  });
+};
+
+module.exports.getOneSong = (reqParams) => {
+  return Song.findById(reqParams.id).then((result) => {
     return result;
   });
 };
@@ -33,9 +39,9 @@ module.exports.updateSong = (reqParams, reqBody) => {
   return Song.findByIdAndUpdate(reqParams.id, updatedSong).then(
     (song, error) => {
       if (error) {
-        return error;
+        return false;
       } else {
-        return "Song was updated";
+        return true;
       }
     }
   );
@@ -45,9 +51,9 @@ module.exports.updateSong = (reqParams, reqBody) => {
 module.exports.deleteSong = (reqParams) => {
   return Song.findByIdAndDelete(reqParams.id).then((song, error) => {
     if (error) {
-      return error;
+      return false;
     } else {
-      return "Song was deleted";
+      return true;
     }
   });
 };
